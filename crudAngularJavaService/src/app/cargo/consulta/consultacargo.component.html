@@ -1,0 +1,27 @@
+<h3>{{titulo}}</h3>
+ 
+<table>
+    <thead>
+    <tr>
+        <th>Id Cargo</th>
+        <th>Descrição</th>
+        <th>Reg. Ativo</th>
+        <th>Editar</th>
+        <th>Excluir</th>
+    </tr>
+    </thead>
+ 
+    <tbody>
+        <tr *ngFor="let cargo of cargos; let i = index;">
+        <td>{{ cargo.id }}</td>        
+        <td>{{ cargo.descricao }}</td>        
+        <td *ngIf='cargo.ativo'>Sim</td>
+        <td *ngIf='!cargo.ativo'>Não</td>
+        <td><a (click)="editar(cargo.id);">Editar</a></td>
+        <td><a (click)="excluir(cargo.id, i);">Excluir</a></td>
+        </tr>
+        <tr>
+           <td colspan="6" style="text-align: right;">Total de Cargos: {{ cargos.length }}</td> 
+        </tr>
+    </tbody>
+</table>

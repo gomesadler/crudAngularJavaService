@@ -1,0 +1,20 @@
+<form (ngSubmit)="salvar()">   
+ 
+    <br/>
+    <h3>{{titulo}}</h3>
+ 
+    <label>Id Cargo:
+        <input type="input" name="id_cargo" size="10" [(ngModel)]="cargo.id" disabled/>
+    </label><br/><br/>
+ 
+    <label>Descrição:
+        <input type="input" name="descricao" size="30" [(ngModel)]="cargo.descricao"/>
+    </label><br/><br/>
+ 
+    <label>Cargo Ativo:
+        <input type="radio" name="ativo" [(ngModel)]="cargo.ativo" [value]="true">Sim
+        <input type="radio" name="ativo" [(ngModel)]="cargo.ativo" [value]="false">Não<br>
+    </label><br/><br/>
+ 
+    <button type="submit">Salvar</button>
+</form>

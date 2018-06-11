@@ -1,0 +1,52 @@
+<form (ngSubmit)="salvar()">   
+ 
+    <br/>
+    <h3>{{titulo}}</h3>
+ 
+    <label>ID:
+        <input type="input" name="id" size="10" [(ngModel)]="pessoa.id" disabled/>
+    </label><br/><br/>
+ 
+    <label>Nome:
+        <input type="input" name="nome" size="30" [(ngModel)]="pessoa.nome"/>
+    </label><br/><br/>
+
+    <label>Bairro:
+        <input type="input" name="bairro" size="30" [(ngModel)]="pessoa.bairro"/>
+    </label><br/><br/>
+
+    <label>Endereco:
+        <input type="input" name="endereco" size="30" [(ngModel)]="pessoa.endereco"/>
+    </label><br/><br/>
+ 
+    <label>Registro Ativo:
+        <input type="radio" name="ativo" [(ngModel)]="pessoa.ativo" [value]="true">Sim
+        <input type="radio" name="ativo" [(ngModel)]="pessoa.ativo" [value]="false">Não<br>
+    </label><br/><br/>
+
+    <label>Cep:
+        <input type="input" name="cep" size="30" [(ngModel)]="pessoa.cep"/>
+    </label><br/><br/>
+
+    <label>Cpf:
+        <input type="input" name="cpf" size="30" [(ngModel)]="pessoa.cpf"/>
+    </label><br/><br/>
+
+    <label>Salario:
+        <input type="input" name="salario" size="30" [(ngModel)]="pessoa.salario"/>
+    </label><br/><br/>
+
+    <label>Cidade:
+        <input type="input" name="cidade" size="30" [(ngModel)]="pessoa.cidade"/>
+    </label><br/><br/>
+
+    <label>Uf:
+        <input type="input" name="uf" size="30" [(ngModel)]="pessoa.uf"/>
+    </label><br/><br/>
+
+    <label>id_cargo:
+        <input type="input" name="id_cargo" size="30" [(ngModel)]="pessoa.id_cargo"/>
+    </label><br/><br/>
+ 
+    <button type="submit">Salvar</button>
+</form>
